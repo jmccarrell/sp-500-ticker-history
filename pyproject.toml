@@ -1,13 +1,24 @@
 [project]
-name = "hello-svc"
-version = "0"
-requires-python = "==3.14.*"
-dependencies = [
-  "fastapi", "granian", "stamina"
-]
+name = "sp-500-ticker-history"
+version = "0.1.0"
+description = "Sets of S&P 500 ticker symbols by date."
+authors = [{ name = "Jeff McCarrell", email = "jeff@mccarrell.org" }]
+requires-python = ">=3.11, <4"
+license = "MIT"
+dependencies = ["strictyaml>=1.7.3,<2"]
 
 [dependency-groups]
-dev = ["fastapi[standard]",  "pytest", "coverage"]
+dev = [
+    "coverage",
+    "mypy>=1.9.0,<2",
+    "pytest",
+    "ruff>=0.12.2",
+]
+
+[tool.uv]
+default-groups = [
+    "dev",
+]
 
 [build-system]
 requires = ["uv_build>=0.8.0"]
@@ -17,10 +28,8 @@ build-backend = "uv_build"
 [tool.coverage.run]
 branch = true
 parallel = true
-source = ["hello_svc", "tests"]
+source = ["sp_500_ticker_history", "tests"]
 
-# specify no coverage for code that is to be executed only once
 [tool.coverage.report]
 show_missing = true
 skip_covered = true
-omit = ["src/**/asgi.py"]

@@ -1,8 +1,6 @@
 set dotenv-load
 
-PORT := env("PORT", "8000")
 ARGS_TEST := env("_UV_RUN_ARGS_TEST", "")
-ARGS_SERVE := env("_UV_RUN_ARGS_SERVE", "")
 
 
 @_:
@@ -22,9 +20,6 @@ _cov *args:
 @cov:
     just _cov erase
     just _cov run -m pytest tests
-    # Ensure ASGI entrypoint is importable.
-    # You can also use coverage to run your CLI entrypoints.
-    just _cov run -m hello_svc.asgi
     just _cov combine
     just _cov report
     just _cov html
@@ -43,25 +38,6 @@ typing:
 # Perform all checks
 [group('qa')]
 check-all: lint cov typing
-
-
-# Run development server
-[group('run')]
-serve:
-    uv run {{ ARGS_SERVE }} -m fastapi dev src/hello_svc/asgi.py --port {{ PORT }}
-
-# Send HTTP request to development server
-[group('run')]
-req path="" *args:
-    @just _http {{ args }} http://127.0.0.1:{{ PORT }}/{{ path }}
-
-_http *args:
-    uvx --from httpie http {{ args }}
-
-# Open development server in web browser
-[group('run')]
-browser:
-    uv run -m webbrowser -t http://127.0.0.1:{{ PORT }}
 
 
 # Update dependencies
@@ -83,3 +59,23 @@ clean:
 # Recreate project virtualenv from nothing
 [group('lifecycle')]
 fresh: clean install
+
+# Cut a release: just release 0.2.0
+[group('lifecycle')]
+release VERSION:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if ! echo "{{ VERSION }}" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+        echo "error: VERSION must be semver (e.g. 0.1.0), got '{{ VERSION }}'"
+        exit 1
+    fi
+    if [ -n "$(git status --porcelain)" ]; then
+        echo "error: uncommitted changes — commit or stash first"
+        exit 1
+    fi
+    sed -i.bak 's/^version = ".*"/version = "{{ VERSION }}"/' pyproject.toml && rm pyproject.toml.bak
+    git add pyproject.toml
+    git commit -m "release v{{ VERSION }}"
+    git tag -a "v{{ VERSION }}" -m "v{{ VERSION }}"
+    git push
+    git push origin "v{{ VERSION }}"
