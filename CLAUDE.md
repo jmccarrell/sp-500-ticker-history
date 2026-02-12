@@ -82,7 +82,8 @@ When S&P announces index changes:
 
 ### Cutting a release
 1. Get the release version from the user
-2. Run `just release VERSION` (e.g. `just release 0.2.0`)
+2. Ensure all changes are merged to `main` — run `just release` only from `main`
+3. Run `just release VERSION` (e.g. `just release 2026.2.0`)
 
 The `just release` recipe:
 - Validates the version format
