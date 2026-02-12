@@ -1,6 +1,6 @@
 [project]
 name = "sp-500-ticker-history"
-version = "0.1.0"
+version = "2026.1.0"
 description = "Sets of S&P 500 ticker symbols by date."
 authors = [{ name = "Jeff McCarrell", email = "jeff@mccarrell.org" }]
 requires-python = ">=3.14, <4"
