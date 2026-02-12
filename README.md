@@ -15,7 +15,7 @@ assert "AAPL" in tickers
 
 ## Coverage
 
-January 1, 2024 through at least February 9, 2026.
+January 1, 2023 through at least February 9, 2026.
 
 ## Depends on
 
