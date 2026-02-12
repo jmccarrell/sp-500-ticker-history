@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This project provides date-centric access to S&P 500 index membership over time. The primary API is `sp500_tickers_as_of(year, month, day)` which returns a frozenset of ticker symbols that were in the index on the specified date. Coverage spans from January 1, 2021 through at least February 9, 2026.
+This project provides date-centric access to S&P 500 index membership over time. The primary API is `sp500_tickers_as_of(year, month, day)` which returns a frozenset of ticker symbols that were in the index on the specified date. Coverage spans from January 1, 2020 through at least February 9, 2026.
 
 ## Common Commands
 
@@ -101,8 +101,8 @@ Pushing a `v*` tag triggers the `.github/workflows/release.yml` workflow, which:
 ## Data Sources
 
 The source of truth for S&P 500 ticker symbols is:
-- Current components: https://en.wikipedia.org/wiki/List_of_S%26P_500_companies#S&P_500_component_stocks
-- Historical changes: https://en.wikipedia.org/wiki/List_of_S%26P_500_companies#Selected_changes_to_the_list_of_S&P_500_components
+- Current components: https://en.wikipedia.org/wiki/List_of_S&P_500_companies#S&P_500_component_stocks
+- Historical changes: https://en.wikipedia.org/wiki/List_of_S&P_500_companies#Selected_changes_to_the_list_of_S&P_500_components
 
 ## Notes
 
