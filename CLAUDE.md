@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This project provides date-centric access to S&P 500 index membership over time. The primary API is `sp500_tickers_as_of(year, month, day)` which returns a frozenset of ticker symbols that were in the index on the specified date. Coverage spans from January 1, 2021 through at least February 9, 2026.
+This project provides date-centric access to S&P 500 index membership over time. The primary API is `sp500_tickers_as_of(year, month, day)` which returns a frozenset of ticker symbols that were in the index on the specified date. Coverage spans from January 1, 2020 through at least February 9, 2026.
 
 ## Common Commands
 
@@ -101,8 +101,31 @@ Pushing a `v*` tag triggers the `.github/workflows/release.yml` workflow, which:
 ## Data Sources
 
 The source of truth for S&P 500 ticker symbols is:
-- Current components: https://en.wikipedia.org/wiki/List_of_S%26P_500_companies#S&P_500_component_stocks
-- Historical changes: https://en.wikipedia.org/wiki/List_of_S%26P_500_companies#Selected_changes_to_the_list_of_S&P_500_components
+- Current components: https://en.wikipedia.org/wiki/List_of_S&P_500_companies#S&P_500_component_stocks
+- Historical changes: https://en.wikipedia.org/wiki/List_of_S&P_500_companies#Selected_changes_to_the_list_of_S&P_500_components
+
+### Scraping Wikipedia
+
+To fetch data from the Wikipedia S&P 500 page, use `httpx` + `BeautifulSoup` with `lxml` from the sibling project `../scrape-sp500-symbols/`. Run scraping scripts with that project's `uv run python`:
+
+```python
+import httpx
+from bs4 import BeautifulSoup
+
+SP500_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+headers = {
+    "User-Agent": "scrape-sp500-symbols/0.1 (https://github.com; educational project)",
+}
+response = httpx.get(SP500_URL, headers=headers, follow_redirects=True)
+response.raise_for_status()
+soup = BeautifulSoup(response.text, "lxml")
+
+# Current constituents table
+constituents_table = soup.find("table", {"id": "constituents"})
+
+# Historical changes table
+changes_table = soup.find("table", {"id": "changes"})
+```
 
 ## Notes
 
