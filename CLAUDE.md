@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This project provides date-centric access to S&P 500 index membership over time. The primary API is `sp500_tickers_as_of(year, month, day)` which returns a frozenset of ticker symbols that were in the index on the specified date. Coverage spans from January 1, 2025 through at least February 9, 2026.
+This project provides date-centric access to S&P 500 index membership over time. The primary API is `sp500_tickers_as_of(year, month, day)` which returns a frozenset of ticker symbols that were in the index on the specified date. Coverage spans from January 1, 2024 through at least February 9, 2026.
 
 ## Common Commands
 
@@ -75,7 +75,8 @@ When S&P announces index changes:
 1. Update the appropriate YAML file in `src/sp_500_ticker_history/`
 2. Add test cases in the corresponding `tests/test_sp500_YYYY.py` file
 3. Tests should verify the swap occurred on the correct date
-4. Run `just check-all` before committing
+4. Update the coverage date in `CLAUDE.md` and `README.md`
+5. Run `just check-all` before committing
 
 ## Releasing
 
