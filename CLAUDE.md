@@ -104,6 +104,29 @@ The source of truth for S&P 500 ticker symbols is:
 - Current components: https://en.wikipedia.org/wiki/List_of_S&P_500_companies#S&P_500_component_stocks
 - Historical changes: https://en.wikipedia.org/wiki/List_of_S&P_500_companies#Selected_changes_to_the_list_of_S&P_500_components
 
+### Scraping Wikipedia
+
+To fetch data from the Wikipedia S&P 500 page, use `httpx` + `BeautifulSoup` with `lxml` from the sibling project `../scrape-sp500-symbols/`. Run scraping scripts with that project's `uv run python`:
+
+```python
+import httpx
+from bs4 import BeautifulSoup
+
+SP500_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+headers = {
+    "User-Agent": "scrape-sp500-symbols/0.1 (https://github.com; educational project)",
+}
+response = httpx.get(SP500_URL, headers=headers, follow_redirects=True)
+response.raise_for_status()
+soup = BeautifulSoup(response.text, "lxml")
+
+# Current constituents table
+constituents_table = soup.find("table", {"id": "constituents"})
+
+# Historical changes table
+changes_table = soup.find("table", {"id": "changes"})
+```
+
 ## Notes
 
 - Python 3.14+ required
