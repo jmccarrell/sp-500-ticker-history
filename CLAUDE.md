@@ -81,9 +81,7 @@ When S&P announces index changes:
 
 ### Cutting a release
 1. Get the release version from the user
-2. Update `pyproject.toml` with the new version
-3. Commit all changes
-4. Run `just release VERSION` (e.g. `just release 0.2.0`)
+2. Run `just release VERSION` (e.g. `just release 0.2.0`)
 
 The `just release` recipe:
 - Validates the version format
@@ -106,7 +104,7 @@ The source of truth for S&P 500 ticker symbols is:
 
 ## Notes
 
-- Python 3.11+ required
+- Python 3.14+ required
 - Line length: 108 characters (configured in `ruff.toml`)
 - Import sorting enabled via ruff (isort rules)
 - Coverage settings: branch coverage enabled, shows missing lines, skips covered lines
