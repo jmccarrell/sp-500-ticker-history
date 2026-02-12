@@ -15,7 +15,7 @@ assert "AAPL" in tickers
 
 ## Coverage
 
-January 1, 2012 through at least February 9, 2026.
+January 1, 2011 through at least February 9, 2026.
 
 ## Data Sources
 
