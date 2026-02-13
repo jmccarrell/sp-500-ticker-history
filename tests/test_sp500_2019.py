@@ -4,7 +4,7 @@ from sp_500_ticker_history import sp500_tickers_as_of
 
 from .helpers import _test_at_year_boundary, _test_one_swap
 
-num_tickers_2019 = 505
+num_tickers_2019 = 506
 
 
 def test_jan1_2019_count() -> None:
@@ -25,14 +25,27 @@ def test_jan_2019_tfx_pcg_swap() -> None:
     _test_one_swap(datetime.date.fromisoformat("2019-01-18"), "PCG", "TFX", num_tickers_2019)
 
 
+def test_feb_2019_nfx_removal() -> None:
+    # Feb 15: Newfield Exploration (NFX) removed after Encana acquisition (count 506 to 505)
+    tickers_feb14 = sp500_tickers_as_of(2019, 2, 14)
+    tickers_feb15 = sp500_tickers_as_of(2019, 2, 15)
+    assert len(tickers_feb14) == num_tickers_2019
+    assert len(tickers_feb15) == num_tickers_2019 - 1
+    assert "NFX" in tickers_feb14
+    assert "NFX" not in tickers_feb15
+
+
+num_tickers_after_feb15 = num_tickers_2019 - 1  # 505
+
+
 def test_feb_2019_wab_gt_swap() -> None:
     # Feb 27: Wabtec (WAB) replaced Goodyear (GT) after GE transportation acquisition
-    _test_one_swap(datetime.date.fromisoformat("2019-02-27"), "GT", "WAB", num_tickers_2019)
+    _test_one_swap(datetime.date.fromisoformat("2019-02-27"), "GT", "WAB", num_tickers_after_feb15)
 
 
 def test_apr_2019_dow_bhf_swap() -> None:
     # Apr 2: Dow (DOW) spun off from DowDuPont, replaced Brighthouse Financial (BHF)
-    _test_one_swap(datetime.date.fromisoformat("2019-04-02"), "BHF", "DOW", num_tickers_2019)
+    _test_one_swap(datetime.date.fromisoformat("2019-04-02"), "BHF", "DOW", num_tickers_after_feb15)
 
 
 def test_jun_2019_dwdp_spinoffs() -> None:
@@ -40,8 +53,8 @@ def test_jun_2019_dwdp_spinoffs() -> None:
     tickers_before = sp500_tickers_as_of(2019, 6, 2)
     tickers_after = sp500_tickers_as_of(2019, 6, 3)
 
-    assert len(tickers_before) == num_tickers_2019
-    assert len(tickers_after) == num_tickers_2019
+    assert len(tickers_before) == num_tickers_after_feb15
+    assert len(tickers_after) == num_tickers_after_feb15
 
     removed = {"DWDP", "FLR"}
     added = {"DD", "CTVA"}
@@ -61,9 +74,9 @@ def test_jun_2019_bemis_amcor_sequence() -> None:
     tickers_jun7 = sp500_tickers_as_of(2019, 6, 7)
     tickers_jun11 = sp500_tickers_as_of(2019, 6, 11)
 
-    assert len(tickers_jun6) == num_tickers_2019
-    assert len(tickers_jun7) == num_tickers_2019
-    assert len(tickers_jun11) == num_tickers_2019
+    assert len(tickers_jun6) == num_tickers_after_feb15
+    assert len(tickers_jun7) == num_tickers_after_feb15
+    assert len(tickers_jun11) == num_tickers_after_feb15
 
     assert "MAT" in tickers_jun6
     assert "BMS" not in tickers_jun6
@@ -80,12 +93,12 @@ def test_jun_2019_bemis_amcor_sequence() -> None:
 
 def test_jul_2019_mktx_lll_swap() -> None:
     # Jul 1: MarketAxess (MKTX) replaced L3 Technologies (LLL) after Harris acquisition
-    _test_one_swap(datetime.date.fromisoformat("2019-07-01"), "LLL", "MKTX", num_tickers_2019)
+    _test_one_swap(datetime.date.fromisoformat("2019-07-01"), "LLL", "MKTX", num_tickers_after_feb15)
 
 
 def test_jul_2019_tmus_rht_swap() -> None:
     # Jul 15: T-Mobile (TMUS) replaced Red Hat (RHT) after IBM acquisition
-    _test_one_swap(datetime.date.fromisoformat("2019-07-15"), "RHT", "TMUS", num_tickers_2019)
+    _test_one_swap(datetime.date.fromisoformat("2019-07-15"), "RHT", "TMUS", num_tickers_after_feb15)
 
 
 def test_aug_2019_bulk_swap() -> None:
@@ -93,8 +106,8 @@ def test_aug_2019_bulk_swap() -> None:
     tickers_before = sp500_tickers_as_of(2019, 8, 8)
     tickers_after = sp500_tickers_as_of(2019, 8, 9)
 
-    assert len(tickers_before) == num_tickers_2019
-    assert len(tickers_after) == num_tickers_2019
+    assert len(tickers_before) == num_tickers_after_feb15
+    assert len(tickers_after) == num_tickers_after_feb15
 
     removed = {"APC", "FL"}
     added = {"LDOS", "IEX"}
@@ -109,32 +122,32 @@ def test_aug_2019_bulk_swap() -> None:
 
 def test_sep_2019_cdw_tss_swap() -> None:
     # Sep 23: CDW (CDW) replaced TSYS (TSS) after Global Payments acquisition
-    _test_one_swap(datetime.date.fromisoformat("2019-09-23"), "TSS", "CDW", num_tickers_2019)
+    _test_one_swap(datetime.date.fromisoformat("2019-09-23"), "TSS", "CDW", num_tickers_after_feb15)
 
 
 def test_sep_2019_nvr_jef_swap() -> None:
     # Sep 26: NVR (NVR) replaced Jefferies (JEF)
-    _test_one_swap(datetime.date.fromisoformat("2019-09-26"), "JEF", "NVR", num_tickers_2019)
+    _test_one_swap(datetime.date.fromisoformat("2019-09-26"), "JEF", "NVR", num_tickers_after_feb15)
 
 
 def test_oct_2019_lvs_nktr_swap() -> None:
     # Oct 3: Las Vegas Sands (LVS) replaced Nektar Therapeutics (NKTR)
-    _test_one_swap(datetime.date.fromisoformat("2019-10-03"), "NKTR", "LVS", num_tickers_2019)
+    _test_one_swap(datetime.date.fromisoformat("2019-10-03"), "NKTR", "LVS", num_tickers_after_feb15)
 
 
 def test_nov_2019_now_celg_swap() -> None:
     # Nov 21: ServiceNow (NOW) replaced Celgene (CELG) after Bristol-Myers Squibb acquisition
-    _test_one_swap(datetime.date.fromisoformat("2019-11-21"), "CELG", "NOW", num_tickers_2019)
+    _test_one_swap(datetime.date.fromisoformat("2019-11-21"), "CELG", "NOW", num_tickers_after_feb15)
 
 
 def test_dec_2019_wrb_viab_swap() -> None:
     # Dec 5: W. R. Berkley (WRB) replaced Viacom (VIAB) after CBS/Viacom merger
-    _test_one_swap(datetime.date.fromisoformat("2019-12-05"), "VIAB", "WRB", num_tickers_2019)
+    _test_one_swap(datetime.date.fromisoformat("2019-12-05"), "VIAB", "WRB", num_tickers_after_feb15)
 
 
 def test_dec_2019_odfl_sti_swap() -> None:
     # Dec 9: Old Dominion Freight Line (ODFL) replaced SunTrust Banks (STI) after BB&T/Truist merger
-    _test_one_swap(datetime.date.fromisoformat("2019-12-09"), "STI", "ODFL", num_tickers_2019)
+    _test_one_swap(datetime.date.fromisoformat("2019-12-09"), "STI", "ODFL", num_tickers_after_feb15)
 
 
 def test_dec_2019_rebalance() -> None:
@@ -142,8 +155,8 @@ def test_dec_2019_rebalance() -> None:
     tickers_before = sp500_tickers_as_of(2019, 12, 22)
     tickers_after = sp500_tickers_as_of(2019, 12, 23)
 
-    assert len(tickers_before) == num_tickers_2019
-    assert len(tickers_after) == num_tickers_2019
+    assert len(tickers_before) == num_tickers_after_feb15
+    assert len(tickers_after) == num_tickers_after_feb15
 
     removed = {"AMG", "MAC", "TRIP"}
     added = {"LYV", "STE", "ZBRA"}

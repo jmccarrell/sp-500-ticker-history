@@ -339,6 +339,7 @@ tickers_on_Jan_1:
   - NEE
   - NEM
   - NFLX
+  - NFX
   - NI
   - NKE
   - NKTR
@@ -519,6 +520,10 @@ changes:
       - PCG
     union:
       - TFX
+
+  "2019-02-15":
+    difference:
+      - NFX
 
   "2019-02-27":
     difference:

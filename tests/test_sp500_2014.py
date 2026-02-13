@@ -4,7 +4,7 @@ from sp_500_ticker_history import sp500_tickers_as_of
 
 from .helpers import _test_at_year_boundary, _test_one_swap
 
-num_tickers_2014 = 499
+num_tickers_2014 = 500
 
 
 def test_jan1_2014_count() -> None:
@@ -40,7 +40,7 @@ def test_apr_2014_googl_addition() -> None:
     assert "GOOGL" in tickers_apr3
 
 
-num_tickers_after_apr3 = num_tickers_2014 + 1  # 500
+num_tickers_after_apr3 = num_tickers_2014 + 1  # 501
 
 
 def test_may_2014_bulk_swap() -> None:
@@ -92,7 +92,7 @@ def test_aug_2014_disck_addition() -> None:
     assert "DISCK" in tickers_aug6
 
 
-num_tickers_after_aug6 = num_tickers_after_apr3 + 1  # 501
+num_tickers_after_aug6 = num_tickers_after_apr3 + 1  # 502
 
 
 def test_aug_2014_mnk_rdc_swap() -> None:

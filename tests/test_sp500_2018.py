@@ -4,7 +4,7 @@ from sp_500_ticker_history import sp500_tickers_as_of
 
 from .helpers import _test_at_year_boundary, _test_one_swap
 
-num_tickers_2018 = 505
+num_tickers_2018 = 506
 
 
 def test_jan1_2018_count() -> None:

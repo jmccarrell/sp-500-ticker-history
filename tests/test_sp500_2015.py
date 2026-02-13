@@ -4,7 +4,7 @@ from sp_500_ticker_history import sp500_tickers_as_of
 
 from .helpers import _test_at_year_boundary, _test_one_swap
 
-num_tickers_2015 = 501
+num_tickers_2015 = 502
 
 
 def test_jan1_2015_count() -> None:
@@ -67,7 +67,7 @@ def test_mar_2015_rebalance() -> None:
     assert "AGN" in tickers_after
 
 
-num_tickers_after_mar23 = num_tickers_2015 + 1  # 502
+num_tickers_after_mar23 = num_tickers_2015 + 1  # 503
 
 
 def test_apr_2015_o_win_swap() -> None:
@@ -146,7 +146,7 @@ def test_sep_2015_share_class_additions() -> None:
         assert ticker in tickers_sep18
 
 
-num_tickers_after_sep18 = num_tickers_after_mar23 + 3  # 505
+num_tickers_after_sep18 = num_tickers_after_mar23 + 3  # 506
 
 
 def test_oct_2015_vrsk_joy_swap() -> None:
@@ -184,7 +184,7 @@ def test_dec_2015_cmcsk_removal() -> None:
     assert "CMCSK" not in tickers_dec15
 
 
-num_tickers_after_dec15 = num_tickers_after_sep18 - 1  # 504
+num_tickers_after_dec15 = num_tickers_after_sep18 - 1  # 505
 
 
 def test_dec_2015_chd_altr_swap() -> None:

@@ -1,22 +1,16 @@
 ---
-year: 2016
+year: 2010
 tickers_on_Jan_1:
   - A
   - AA
-  - AAL
-  - AAP
   - AAPL
-  - ABBV
   - ABT
   - ACE
-  - ACN
   - ADBE
   - ADI
   - ADM
   - ADP
-  - ADS
   - ADSK
-  - ADT
   - AEE
   - AEP
   - AES
@@ -27,31 +21,32 @@ tickers_on_Jan_1:
   - AIV
   - AIZ
   - AKAM
+  - AKS
   - ALL
-  - ALLE
-  - ALXN
+  - ALTR
   - AMAT
-  - AME
-  - AMG
+  - AMD
   - AMGN
   - AMP
   - AMT
   - AMZN
   - AN
   - ANDV
+  - ANF
   - AON
   - APA
   - APC
   - APD
   - APH
-  - APTV
+  - APOL
   - ARG
+  - ATI
   - ATO
-  - ATVI
   - AVB
-  - AVGO
+  - AVP
   - AVY
   - AXP
+  - AYE
   - AZO
   - BA
   - BAC
@@ -62,19 +57,22 @@ tickers_on_Jan_1:
   - BBY
   - BCR
   - BDX
+  - BEAM
   - BEN
   - BF.B
   - BHI
+  - BIG
   - BIIB
+  - BJS
   - BK
   - BKNG
-  - BLK
+  - BMC
+  - BMS
   - BMY
   - BRCM
   - BRK.B
   - BSX
-  - BWA
-  - BXLT
+  - BTU
   - BXP
   - C
   - CA
@@ -82,25 +80,24 @@ tickers_on_Jan_1:
   - CAH
   - CAM
   - CAT
-  - CB
   - CBRE
   - CCE
-  - CCI
   - CCL
+  - CEG
   - CELG
-  - CERN
+  - CEPH
   - CF
-  - CHD
+  - CFN
   - CHK
   - CHRW
   - CI
   - CINF
   - CL
+  - CLF
   - CLX
   - CMA
   - CMCSA
   - CME
-  - CMG
   - CMI
   - CMS
   - CNP
@@ -111,33 +108,31 @@ tickers_on_Jan_1:
   - COR
   - COST
   - CPB
-  - CPGX
-  - CPRI
+  - CPWR
   - CRM
+  - CSC
   - CSCO
-  - CSRA
   - CSX
   - CTAS
   - CTRA
   - CTSH
   - CTXS
-  - CVC
+  - CVH
   - CVS
   - CVX
   - D
-  - DAL
   - DD
   - DE
+  - DELL
+  - DF
   - DFS
-  - DG
   - DGX
   - DHI
   - DHR
   - DIS
   - DISCA
-  - DISCK
-  - DLTR
   - DNB
+  - DNR
   - DO
   - DOC
   - DOV
@@ -145,7 +140,9 @@ tickers_on_Jan_1:
   - DPS
   - DRI
   - DTE
+  - DTV
   - DUK
+  - DV
   - DVA
   - DVN
   - EA
@@ -154,33 +151,32 @@ tickers_on_Jan_1:
   - ED
   - EFX
   - EIX
+  - EK
   - EL
   - ELV
   - EMC
   - EMN
   - EMR
-  - ENDP
   - EOG
-  - EQIX
+  - EP
   - EQR
   - EQT
   - ES
   - ESRX
-  - ESS
-  - ESV
   - ETFC
   - ETN
   - ETR
-  - EW
   - EXC
   - EXPD
   - EXPE
   - F
   - FAST
   - FCX
+  - FDO
   - FDX
   - FE
-  - FFIV
+  - FHN
+  - FII
   - FIS
   - FISV
   - FITB
@@ -188,9 +184,8 @@ tickers_on_Jan_1:
   - FLR
   - FLS
   - FMC
-  - FOSL
-  - FOX
   - FOXA
+  - FRX
   - FSLR
   - FTI
   - FTR
@@ -198,19 +193,18 @@ tickers_on_Jan_1:
   - GD
   - GE
   - GEN
-  - GGP
+  - GENZ
+  - GHC
   - GILD
   - GIS
   - GL
   - GLW
-  - GM
-  - GMCR
   - GME
+  - GNW
   - GOOG
-  - GOOGL
   - GPC
   - GPS
-  - GRMN
+  - GR
   - GS
   - GT
   - GWW
@@ -218,60 +212,61 @@ tickers_on_Jan_1:
   - HAR
   - HAS
   - HBAN
-  - HBI
-  - HCA
+  - HCBK
   - HD
   - HES
   - HIG
+  - HNZ
   - HOG
   - HON
   - HOT
-  - HP
-  - HPE
   - HPQ
   - HRB
   - HRL
-  - HSIC
+  - HSP
   - HST
   - HSY
   - HUM
   - IBM
   - ICE
   - IFF
-  - ILMN
+  - IGT
   - INTC
   - INTU
   - IP
   - IPG
   - IRM
   - ISRG
+  - ITT
   - ITW
   - IVZ
   - J
-  - JBHT
+  - JBL
   - JCI
+  - JCP
+  - JDSU
   - JEF
   - JNJ
   - JNPR
+  - JNS
   - JPM
   - JWN
   - K
   - KEY
-  - KHC
+  - KFT
+  - KG
   - KIM
   - KLAC
   - KMB
-  - KMI
-  - KMX
   - KO
   - KR
   - KSS
-  - KSU
   - L
   - LEG
   - LEN
   - LH
   - LHX
+  - LIFE
   - LIN
   - LLL
   - LLTC
@@ -279,15 +274,14 @@ tickers_on_Jan_1:
   - LM
   - LMT
   - LNC
+  - LO
   - LOW
-  - LRCX
+  - LSI
   - LUMN
   - LUV
-  - LVLT
-  - LYB
+  - LXK
   - M
   - MA
-  - MAC
   - MAR
   - MAS
   - MAT
@@ -295,21 +289,20 @@ tickers_on_Jan_1:
   - MCHP
   - MCK
   - MCO
-  - MDLZ
+  - MDP
   - MDT
+  - MEE
   - MET
-  - META
-  - MHK
+  - MFE
+  - MHS
+  - MI
+  - MIL
   - MJN
   - MKC
-  - MLM
   - MMM
-  - MNK
-  - MNST
   - MO
+  - MOLX
   - MON
-  - MOS
-  - MPC
   - MRK
   - MRO
   - MRSH
@@ -319,28 +312,30 @@ tickers_on_Jan_1:
   - MTB
   - MU
   - MUR
-  - NAVI
+  - MWW
   - NBL
+  - NBR
   - NDAQ
+  - NE
   - NEE
   - NEM
-  - NFLX
-  - NFX
   - NI
   - NKE
-  - NLSN
   - NOC
   - NOV
+  - NOVL
   - NRG
   - NSC
+  - NSM
   - NTAP
   - NTRS
   - NUE
   - NVDA
+  - NVLS
   - NWL
-  - NWS
-  - NWSA
-  - O
+  - NYT
+  - NYX
+  - ODP
   - OI
   - OKE
   - OMC
@@ -354,61 +349,66 @@ tickers_on_Jan_1:
   - PCG
   - PCL
   - PCP
+  - PCS
   - PDCO
   - PEG
   - PEP
   - PFE
   - PFG
   - PG
+  - PGN
   - PGR
   - PH
   - PHM
   - PLD
+  - PLL
   - PM
   - PNC
-  - PNR
   - PNW
   - POM
   - PPG
   - PPL
-  - PRGO
   - PRU
   - PSA
   - PSKY
-  - PSX
-  - PVH
+  - PTV
   - PWR
   - PXD
-  - PYPL
+  - Q
   - QCOM
-  - QRVO
   - R
   - RAI
-  - RCL
-  - REGN
+  - RDC
   - RF
   - RHI
   - RHT
-  - RIG
   - RL
   - ROK
   - ROP
   - ROST
   - RRC
+  - RRD
   - RSG
+  - RSH
   - RTN
   - RTX
   - RVTY
+  - RX
+  - S
+  - SAI
   - SBUX
   - SCG
   - SCHW
   - SE
   - SEE
+  - SHLD
   - SHW
-  - SIG
+  - SIAL
+  - SII
   - SJM
   - SLB
-  - SLG
+  - SLE
+  - SLM
   - SNA
   - SNDK
   - SNI
@@ -420,50 +420,46 @@ tickers_on_Jan_1:
   - SRE
   - STI
   - STJ
+  - STR
   - STT
-  - STX
   - STZ
+  - SUN
+  - SVU
   - SW
   - SWK
-  - SWKS
   - SWN
-  - SYF
+  - SWY
   - SYK
   - SYY
   - T
   - TAP
   - TDC
   - TE
-  - TEL
+  - TEG
+  - TER
   - TFC
   - TGNA
   - TGT
   - THC
+  - TIE
   - TIF
   - TJX
+  - TLAB
   - TMO
   - TPR
-  - TRIP
   - TROW
   - TRV
-  - TSCO
   - TSN
   - TSS
-  - TT
   - TWC
   - TWX
   - TXN
   - TXT
-  - TYC
-  - UAA
-  - UAL
-  - UHS
   - UNH
   - UNM
   - UNP
   - UPS
   - URBN
-  - URI
   - USB
   - V
   - VAR
@@ -472,9 +468,7 @@ tickers_on_Jan_1:
   - VLO
   - VMC
   - VNO
-  - VRSK
   - VRSN
-  - VRTX
   - VTR
   - VTRS
   - VZ
@@ -485,7 +479,9 @@ tickers_on_Jan_1:
   - WELL
   - WFC
   - WFM
+  - WFR
   - WHR
+  - WIN
   - WM
   - WMB
   - WMT
@@ -493,179 +489,70 @@ tickers_on_Jan_1:
   - WY
   - WYN
   - WYNN
-  - XEC
+  - X
   - XEL
   - XL
   - XLNX
   - XOM
   - XRAY
   - XRX
-  - XYL
+  - XTO
   - YHOO
   - YUM
   - ZBH
   - ZION
-  - ZTS
 
 changes:
-  "2016-01-05":
+  "2010-02-26":
     difference:
-      - FOSL
+      - RX
     union:
-      - WTW
+      - HP
 
-  "2016-01-19":
+  "2010-04-29":
     difference:
-      - ACE
+      - BJS
     union:
-      - EXR
+      - CERN
 
-  "2016-02-01":
+  "2010-06-28":
     difference:
-      - BRCM
-      - PCP
+      - XTO
     union:
-      - CFG
-      - FRT
+      - KMX
 
-  "2016-02-22":
+  "2010-06-30":
     difference:
-      - PCL
+      - STR
     union:
-      - CXO
+      - QEP
 
-  "2016-03-04":
+  "2010-07-14":
     difference:
-      - CNX
+      - MIL
     union:
-      - AWK
+      - CB
 
-  "2016-03-07":
+  "2010-08-26":
     difference:
-      - GMCR
+      - SII
     union:
-      - UDR
-
-  "2016-03-30":
-    difference:
-      - ESV
-      - POM
-    union:
-      - CNC
-      - HOLX
-
-  "2016-04-04":
-    difference:
-      - CAM
-    union:
-      - FL
-
-  "2016-04-08":
-    union:
-      - UA
-
-  "2016-04-18":
-    difference:
-      - THC
-    union:
-      - ULTA
-
-  "2016-04-25":
-    difference:
-      - GME
-    union:
-      - GPN
-
-  "2016-05-03":
-    difference:
-      - ADT
-    union:
-      - AYI
-
-  "2016-05-13":
-    difference:
-      - SNDK
-    union:
-      - ALK
-
-  "2016-05-18":
-    difference:
-      - TWC
-    union:
-      - DLR
-
-  "2016-05-23":
-    difference:
-      - ARG
-    union:
-      - LKQ
-
-  "2016-05-31":
-    difference:
-      - CCE
-    union:
-      - AJG
-
-  "2016-06-03":
-    difference:
-      - BXLT
-    union:
-      - TDG
-
-  "2016-06-22":
-    difference:
-      - CVC
-    union:
-      - FBHS
-
-  "2016-07-01":
-    difference:
-      - GAS
-      - TE
-    union:
-      - ALB
-      - LNT
-
-  "2016-07-05":
-    difference:
-      - CPGX
-    union:
-      - FTV
-
-  "2016-09-06":
-    difference:
       - TYC
-    union:
-      - MTD
 
-  "2016-09-08":
+  "2010-11-17":
     difference:
-      - EMC
+      - PTV
     union:
-      - CHTR
+      - TT
 
-  "2016-09-22":
+  "2010-12-17":
     difference:
-      - HOT
+      - EK
+      - KG
+      - NYT
+      - ODP
     union:
-      - COO
-
-  "2016-09-30":
-    difference:
-      - DO
-    union:
-      - COTY
-
-  "2016-11-01":
-    difference:
-      - AA
-    union:
-      - ARNC
-
-  "2016-12-02":
-    difference:
-      - LM
-      - OI
-    union:
-      - EVHC
-      - MAA
+      - CVC
+      - FFIV
+      - NFLX
+      - NFX
