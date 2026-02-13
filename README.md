@@ -27,17 +27,3 @@ composition is maintained by [S&P Dow Jones Indices](https://www.spglobal.com/sp
 
 Ticker symbols used throughout are the **current** trading symbols, even for
 historical dates when a company may have traded under a different symbol.
-
-## Depends on
-
-The only truly required dependency is `uv`.
-Optional, but almost always desirable:
-
-- just
-- direnv
-
-## Show the recipes available
-
-```text
-just
-```
