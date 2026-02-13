@@ -1,12 +1,9 @@
 ---
-year: 2016
+year: 2013
 tickers_on_Jan_1:
   - A
   - AA
-  - AAL
-  - AAP
   - AAPL
-  - ABBV
   - ABT
   - ACE
   - ACN
@@ -14,7 +11,6 @@ tickers_on_Jan_1:
   - ADI
   - ADM
   - ADP
-  - ADS
   - ADSK
   - ADT
   - AEE
@@ -28,28 +24,29 @@ tickers_on_Jan_1:
   - AIZ
   - AKAM
   - ALL
-  - ALLE
+  - ALTR
   - ALXN
   - AMAT
-  - AME
-  - AMG
+  - AMD
   - AMGN
   - AMP
   - AMT
   - AMZN
   - AN
   - ANDV
+  - ANF
   - AON
   - APA
   - APC
   - APD
   - APH
+  - APOL
   - APTV
   - ARG
+  - ATI
   - ATO
-  - ATVI
   - AVB
-  - AVGO
+  - AVP
   - AVY
   - AXP
   - AZO
@@ -62,19 +59,23 @@ tickers_on_Jan_1:
   - BBY
   - BCR
   - BDX
+  - BEAM
   - BEN
   - BF.B
   - BHI
+  - BIG
   - BIIB
   - BK
   - BKNG
   - BLK
+  - BMC
+  - BMS
   - BMY
   - BRCM
   - BRK.B
   - BSX
+  - BTU
   - BWA
-  - BXLT
   - BXP
   - C
   - CA
@@ -90,12 +91,13 @@ tickers_on_Jan_1:
   - CELG
   - CERN
   - CF
-  - CHD
+  - CFN
   - CHK
   - CHRW
   - CI
   - CINF
   - CL
+  - CLF
   - CLX
   - CMA
   - CMCSA
@@ -110,24 +112,25 @@ tickers_on_Jan_1:
   - COP
   - COR
   - COST
+  - COV
   - CPB
-  - CPGX
-  - CPRI
   - CRM
+  - CSC
   - CSCO
-  - CSRA
   - CSX
   - CTAS
   - CTRA
   - CTSH
   - CTXS
   - CVC
+  - CVH
   - CVS
   - CVX
   - D
-  - DAL
   - DD
   - DE
+  - DELL
+  - DF
   - DFS
   - DG
   - DGX
@@ -135,9 +138,9 @@ tickers_on_Jan_1:
   - DHR
   - DIS
   - DISCA
-  - DISCK
   - DLTR
   - DNB
+  - DNR
   - DO
   - DOC
   - DOV
@@ -145,6 +148,7 @@ tickers_on_Jan_1:
   - DPS
   - DRI
   - DTE
+  - DTV
   - DUK
   - DVA
   - DVN
@@ -159,14 +163,11 @@ tickers_on_Jan_1:
   - EMC
   - EMN
   - EMR
-  - ENDP
   - EOG
-  - EQIX
   - EQR
   - EQT
   - ES
   - ESRX
-  - ESS
   - ESV
   - ETFC
   - ETN
@@ -178,9 +179,12 @@ tickers_on_Jan_1:
   - F
   - FAST
   - FCX
+  - FDO
   - FDX
   - FE
   - FFIV
+  - FHN
+  - FII
   - FIS
   - FISV
   - FITB
@@ -189,8 +193,8 @@ tickers_on_Jan_1:
   - FLS
   - FMC
   - FOSL
-  - FOX
   - FOXA
+  - FRX
   - FSLR
   - FTI
   - FTR
@@ -198,16 +202,14 @@ tickers_on_Jan_1:
   - GD
   - GE
   - GEN
-  - GGP
+  - GHC
   - GILD
   - GIS
   - GL
   - GLW
-  - GM
-  - GMCR
   - GME
+  - GNW
   - GOOG
-  - GOOGL
   - GPC
   - GPS
   - GRMN
@@ -218,27 +220,26 @@ tickers_on_Jan_1:
   - HAR
   - HAS
   - HBAN
-  - HBI
-  - HCA
+  - HCBK
   - HD
   - HES
   - HIG
+  - HNZ
   - HOG
   - HON
   - HOT
   - HP
-  - HPE
   - HPQ
   - HRB
   - HRL
-  - HSIC
+  - HSP
   - HST
   - HSY
   - HUM
   - IBM
   - ICE
   - IFF
-  - ILMN
+  - IGT
   - INTC
   - INTU
   - IP
@@ -248,16 +249,18 @@ tickers_on_Jan_1:
   - ITW
   - IVZ
   - J
-  - JBHT
+  - JBL
   - JCI
+  - JCP
+  - JDSU
   - JEF
   - JNJ
   - JNPR
+  - JOY
   - JPM
   - JWN
   - K
   - KEY
-  - KHC
   - KIM
   - KLAC
   - KMB
@@ -265,13 +268,14 @@ tickers_on_Jan_1:
   - KMX
   - KO
   - KR
+  - KRFT
   - KSS
-  - KSU
   - L
   - LEG
   - LEN
   - LH
   - LHX
+  - LIFE
   - LIN
   - LLL
   - LLTC
@@ -279,15 +283,15 @@ tickers_on_Jan_1:
   - LM
   - LMT
   - LNC
+  - LO
   - LOW
   - LRCX
+  - LSI
   - LUMN
   - LUV
-  - LVLT
   - LYB
   - M
   - MA
-  - MAC
   - MAR
   - MAS
   - MAT
@@ -298,15 +302,12 @@ tickers_on_Jan_1:
   - MDLZ
   - MDT
   - MET
-  - META
-  - MHK
   - MJN
   - MKC
-  - MLM
   - MMM
-  - MNK
   - MNST
   - MO
+  - MOLX
   - MON
   - MOS
   - MPC
@@ -319,16 +320,16 @@ tickers_on_Jan_1:
   - MTB
   - MU
   - MUR
-  - NAVI
   - NBL
+  - NBR
   - NDAQ
+  - NE
   - NEE
   - NEM
   - NFLX
   - NFX
   - NI
   - NKE
-  - NLSN
   - NOC
   - NOV
   - NRG
@@ -338,9 +339,7 @@ tickers_on_Jan_1:
   - NUE
   - NVDA
   - NWL
-  - NWS
-  - NWSA
-  - O
+  - NYX
   - OI
   - OKE
   - OMC
@@ -354,9 +353,11 @@ tickers_on_Jan_1:
   - PCG
   - PCL
   - PCP
+  - PCS
   - PDCO
   - PEG
   - PEP
+  - PETM
   - PFE
   - PFG
   - PG
@@ -364,6 +365,7 @@ tickers_on_Jan_1:
   - PH
   - PHM
   - PLD
+  - PLL
   - PM
   - PNC
   - PNR
@@ -376,20 +378,16 @@ tickers_on_Jan_1:
   - PSA
   - PSKY
   - PSX
-  - PVH
   - PWR
   - PXD
-  - PYPL
   - QCOM
-  - QRVO
+  - QEP
   - R
   - RAI
-  - RCL
-  - REGN
+  - RDC
   - RF
   - RHI
   - RHT
-  - RIG
   - RL
   - ROK
   - ROP
@@ -399,16 +397,18 @@ tickers_on_Jan_1:
   - RTN
   - RTX
   - RVTY
+  - S
+  - SAI
   - SBUX
   - SCG
   - SCHW
   - SE
   - SEE
   - SHW
-  - SIG
+  - SIAL
   - SJM
   - SLB
-  - SLG
+  - SLM
   - SNA
   - SNDK
   - SNI
@@ -425,16 +425,17 @@ tickers_on_Jan_1:
   - STZ
   - SW
   - SWK
-  - SWKS
   - SWN
-  - SYF
+  - SWY
   - SYK
   - SYY
   - T
   - TAP
   - TDC
   - TE
+  - TEG
   - TEL
+  - TER
   - TFC
   - TGNA
   - TGT
@@ -446,7 +447,6 @@ tickers_on_Jan_1:
   - TRIP
   - TROW
   - TRV
-  - TSCO
   - TSN
   - TSS
   - TT
@@ -455,15 +455,11 @@ tickers_on_Jan_1:
   - TXN
   - TXT
   - TYC
-  - UAA
-  - UAL
-  - UHS
   - UNH
   - UNM
   - UNP
   - UPS
   - URBN
-  - URI
   - USB
   - V
   - VAR
@@ -472,9 +468,7 @@ tickers_on_Jan_1:
   - VLO
   - VMC
   - VNO
-  - VRSK
   - VRSN
-  - VRTX
   - VTR
   - VTRS
   - VZ
@@ -486,14 +480,16 @@ tickers_on_Jan_1:
   - WFC
   - WFM
   - WHR
+  - WIN
   - WM
   - WMB
   - WMT
+  - WPX
   - WU
   - WY
   - WYN
   - WYNN
-  - XEC
+  - X
   - XEL
   - XL
   - XLNX
@@ -505,167 +501,106 @@ tickers_on_Jan_1:
   - YUM
   - ZBH
   - ZION
-  - ZTS
 
 changes:
-  "2016-01-05":
+  "2013-01-02":
     difference:
-      - FOSL
+      - FII
     union:
-      - WTW
+      - ABBV
 
-  "2016-01-19":
+  "2013-02-15":
     difference:
-      - ACE
+      - BIG
     union:
-      - EXR
+      - PVH
 
-  "2016-02-01":
+  "2013-04-30":
     difference:
-      - BRCM
-      - PCP
+      - PCS
     union:
-      - CFG
-      - FRT
+      - REGN
 
-  "2016-02-22":
+  "2013-05-08":
     difference:
-      - PCL
+      - CVH
     union:
-      - CXO
+      - MAC
 
-  "2016-03-04":
+  "2013-05-23":
     difference:
-      - CNX
+      - DF
     union:
-      - AWK
+      - KSU
 
-  "2016-03-07":
+  "2013-06-06":
     difference:
-      - GMCR
+      - HNZ
     union:
-      - UDR
+      - GM
 
-  "2016-03-30":
+  "2013-06-21":
     difference:
-      - ESV
-      - POM
+      - FHN
     union:
-      - CNC
-      - HOLX
+      - ZTS
 
-  "2016-04-04":
+  "2013-07-01":
     difference:
-      - CAM
+      - APOL
     union:
-      - FL
+      - NWSA
 
-  "2016-04-08":
-    union:
-      - UA
-
-  "2016-04-18":
+  "2013-07-08":
     difference:
-      - THC
+      - S
     union:
-      - ULTA
+      - NLSN
 
-  "2016-04-25":
+  "2013-09-10":
     difference:
-      - GME
+      - BMC
     union:
-      - GPN
+      - DAL
 
-  "2016-05-03":
+  "2013-09-20":
     difference:
-      - ADT
+      - AMD
+      - SAI
     union:
-      - AYI
+      - AME
+      - VRTX
 
-  "2016-05-13":
+  "2013-10-29":
     difference:
-      - SNDK
+      - DELL
     union:
-      - ALK
+      - RIG
 
-  "2016-05-18":
+  "2013-11-13":
     difference:
-      - TWC
+      - NYX
     union:
-      - DLR
+      - CPRI
 
-  "2016-05-23":
+  "2013-12-02":
     difference:
-      - ARG
+      - JCP
     union:
-      - LKQ
+      - ALLE
 
-  "2016-05-31":
+  "2013-12-10":
     difference:
-      - CCE
+      - MOLX
     union:
-      - AJG
+      - GGP
 
-  "2016-06-03":
+  "2013-12-23":
     difference:
-      - BXLT
+      - ANF
+      - JDSU
+      - TER
     union:
-      - TDG
-
-  "2016-06-22":
-    difference:
-      - CVC
-    union:
-      - FBHS
-
-  "2016-07-01":
-    difference:
-      - GAS
-      - TE
-    union:
-      - ALB
-      - LNT
-
-  "2016-07-05":
-    difference:
-      - CPGX
-    union:
-      - FTV
-
-  "2016-09-06":
-    difference:
-      - TYC
-    union:
-      - MTD
-
-  "2016-09-08":
-    difference:
-      - EMC
-    union:
-      - CHTR
-
-  "2016-09-22":
-    difference:
-      - HOT
-    union:
-      - COO
-
-  "2016-09-30":
-    difference:
-      - DO
-    union:
-      - COTY
-
-  "2016-11-01":
-    difference:
-      - AA
-    union:
-      - ARNC
-
-  "2016-12-02":
-    difference:
-      - LM
-      - OI
-    union:
-      - EVHC
-      - MAA
+      - ADS
+      - META
+      - MHK
