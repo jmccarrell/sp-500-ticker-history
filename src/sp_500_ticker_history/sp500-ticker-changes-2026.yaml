@@ -511,3 +511,14 @@ changes:
       - DAY
     union:
       - CIEN
+  "2026-03-23":
+    difference:
+      - LW
+      - MOH
+      - MTCH
+      - PAYC
+    union:
+      - COHR
+      - LITE
+      - SATS
+      - VRT
