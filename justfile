@@ -1,5 +1,8 @@
 set dotenv-load
 
+# Shared worktree recipes (optional).
+mod? wt '~/.config/just/worktree.just'
+
 ARGS_TEST := env("_UV_RUN_ARGS_TEST", "")
 
 
