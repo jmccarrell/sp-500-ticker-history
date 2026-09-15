@@ -62,12 +62,12 @@ tickers_on_Jan_1:
   - BF.B
   - BG
   - BIIB
-  - BK
   - BKNG
   - BKR
   - BLDR
   - BLK
   - BMY
+  - BNY
   - BR
   - BRK.B
   - BRO
@@ -167,7 +167,6 @@ tickers_on_Jan_1:
   - EOG
   - EPAM
   - EQIX
-  - EQR
   - EQT
   - ERIE
   - ES
@@ -472,6 +471,7 @@ tickers_on_Jan_1:
   - VLO
   - VLTO
   - VMC
+  - VMRK
   - VRSK
   - VRSN
   - VRTX
@@ -519,6 +519,45 @@ changes:
       - PAYC
     union:
       - COHR
+      - ECHO
       - LITE
-      - SATS
       - VRT
+  "2026-04-09":
+    difference:
+      - HOLX
+    union:
+      - CASY
+  "2026-05-07":
+    difference:
+      - CTRA
+    union:
+      - VEEV
+  "2026-06-01":
+    union:
+      - FDXF
+  "2026-06-02":
+    difference:
+      - EPAM
+  "2026-06-22":
+    difference:
+      - CPB
+      - POOL
+    union:
+      - FLEX
+      - MRVL
+  "2026-06-29":
+    union:
+      - HONA
+  "2026-06-30":
+    difference:
+      - CAG
+  "2026-08-05":
+    difference:
+      - EA
+    union:
+      - FERG
+  "2026-08-18":
+    difference:
+      - AVB
+    union:
+      - RDDT

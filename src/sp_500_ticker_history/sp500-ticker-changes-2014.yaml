@@ -65,11 +65,11 @@ tickers_on_Jan_1:
   - BF.B
   - BHI
   - BIIB
-  - BK
   - BKNG
   - BLK
   - BMS
   - BMY
+  - BNY
   - BRCM
   - BRK.B
   - BSX
@@ -162,7 +162,6 @@ tickers_on_Jan_1:
   - EMN
   - EMR
   - EOG
-  - EQR
   - EQT
   - ES
   - ESRX
@@ -465,6 +464,7 @@ tickers_on_Jan_1:
   - VIAB
   - VLO
   - VMC
+  - VMRK
   - VNO
   - VRSN
   - VRTX

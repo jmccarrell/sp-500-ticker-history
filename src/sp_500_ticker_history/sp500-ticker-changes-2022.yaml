@@ -63,11 +63,11 @@ tickers_on_Jan_1:
   - BF.B
   - BIIB
   - BIO
-  - BK
   - BKNG
   - BKR
   - BLK
   - BMY
+  - BNY
   - BR
   - BRK.B
   - BRO
@@ -169,7 +169,6 @@ tickers_on_Jan_1:
   - EOG
   - EPAM
   - EQIX
-  - EQR
   - ES
   - ESS
   - ETN
@@ -473,6 +472,7 @@ tickers_on_Jan_1:
   - VFC
   - VLO
   - VMC
+  - VMRK
   - VNO
   - VRSK
   - VRSN

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This project provides date-centric access to S&P 500 index membership over time. The primary API is `sp500_tickers_as_of(year, month, day)` which returns a frozenset of ticker symbols that were in the index on the specified date. Coverage spans from January 1, 2010 through at least March 23, 2026.
+This project provides date-centric access to S&P 500 index membership over time. The primary API is `sp500_tickers_as_of(year, month, day)` which returns a frozenset of ticker symbols that were in the index on the specified date. Coverage spans from January 1, 2010 through at least August 18, 2026.
 
 ## Common Commands
 
@@ -102,30 +102,36 @@ Pushing a `v*` tag triggers the `.github/workflows/release.yml` workflow, which:
 
 The source of truth for S&P 500 ticker symbols is:
 - Current components: https://en.wikipedia.org/wiki/List_of_S&P_500_companies#S&P_500_component_stocks
-- Historical changes: https://en.wikipedia.org/wiki/List_of_S&P_500_companies#Selected_changes_to_the_list_of_S&P_500_components
+- Historical changes: https://en.wikipedia.org/wiki/Historical_components_of_the_S%26P_500
+
+Wikipedia split the changes table out of `List_of_S&P_500_companies` on 2026-08-11; the old
+anchor still resolves to the article, which no longer holds the table.
 
 ### Scraping Wikipedia
 
-To fetch data from the Wikipedia S&P 500 page, use `httpx` + `BeautifulSoup` with `lxml` from the sibling project `../scrape-sp500-symbols/`. Run scraping scripts with that project's `uv run python`:
+The two tables are on two pages, so scraping both means two requests. Use `httpx` + `BeautifulSoup` with `lxml` from the sibling project `../scrape-sp500-symbols/`. Run scraping scripts with that project's `uv run python`:
 
 ```python
 import httpx
 from bs4 import BeautifulSoup
 
-SP500_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
-headers = {
-    "User-Agent": "scrape-sp500-symbols/0.1 (https://github.com; educational project)",
-}
-response = httpx.get(SP500_URL, headers=headers, follow_redirects=True)
-response.raise_for_status()
-soup = BeautifulSoup(response.text, "lxml")
+CONSTITUENTS_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+CHANGES_URL = "https://en.wikipedia.org/wiki/Historical_components_of_the_S%26P_500"
+headers = {"User-Agent": "scrape-sp500-symbols/0.1 (https://github.com; educational project)"}
 
-# Current constituents table
-constituents_table = soup.find("table", {"id": "constituents"})
 
-# Historical changes table
-changes_table = soup.find("table", {"id": "changes"})
+def fetch(url: str) -> BeautifulSoup:
+    response = httpx.get(url, headers=headers, follow_redirects=True)
+    response.raise_for_status()
+    return BeautifulSoup(response.text, "lxml")
+
+
+constituents_table = fetch(CONSTITUENTS_URL).find("table", {"id": "constituents"})
+changes_table = fetch(CHANGES_URL).find("table", {"id": "changes"})
 ```
+
+The changes table records constituent swaps only. A company that stays in the index under a new
+ticker never appears there, so the constituents table is what catches a rename.
 
 ## Notes
 
